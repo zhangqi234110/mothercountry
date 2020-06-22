@@ -2,11 +2,29 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.zhangqi.mothercountry.dao.LabelDao">
+    <resultMap id="result" type="com.zhangqi.mothercountry.pojo.Label">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <association property="topic" javaType="com.zhangqi.mothercountry.pojo.Topic">
+            <id column="id" property="id"></id>
+            <result column="topic" property="topic"></result>
+            <result column="author" property="author"></result>
+            <result column="article" property="article"></result>
+        </association>
 
-    <select id="showAll"  resultType="com.zhangqi.mothercountry.pojo.Label">
+    </resultMap>
 
-        select id,name from t_label;
+
+    <select id="showAll"  resultMap="result">
+
+        select  l.id,l.name,t.topic,t.author,t.article from t_label as l inner join  t_topic as t on l.name=t.topic ;
 
     </select>
+
+    <delete id="delete" parameterType="int">
+
+        delete from t_label where id=#{id}
+
+    </delete>
 
 </mapper>

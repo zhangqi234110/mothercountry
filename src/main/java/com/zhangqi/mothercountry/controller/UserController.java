@@ -62,6 +62,7 @@ public class UserController {
          pipelined.expire(phonenumber + "message", 30);
 
         List<Object> objects = pipelined.syncAndReturnAll();
+        jedis.close();
         return ResponseVo.Success(StatusCode.MESSAGE_TIP.getCode(),StatusCode.MESSAGE_TIP.getMessage(),i);
 
     }

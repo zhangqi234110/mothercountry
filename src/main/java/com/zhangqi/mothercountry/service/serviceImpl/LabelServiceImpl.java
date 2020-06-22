@@ -22,4 +22,10 @@ public class LabelServiceImpl implements LabelService {
         List<Label> labels = labelDao.showAll();
         return ResponseVo.Success(StatusCode.OPERATION_SUCCESS.getCode(),StatusCode.OPERATION_SUCCESS.getMessage(),labels);
     }
+
+    @Override
+    public ResponseVo delete(int id) {
+        int delete = labelDao.delete(id);
+        return ResponseVo.Success(StatusCode.OPERATION_SUCCESS.getCode(),StatusCode.OPERATION_SUCCESS.getMessage());
+    }
 }
