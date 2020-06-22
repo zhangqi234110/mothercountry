@@ -30,7 +30,7 @@ public class HelloMotherController {
         HashMap<Object, Object> map = new HashMap<>();
         map.put("tip","欢迎来到的来联盟！");
         map.put("message","这里是妈妈们交流的圣地！测试一下");
-        map.put("me","喀喀喀");
+        map.put("me1","嗡嗡嗡嗡嗡嗡");
         return map;
 
     }
