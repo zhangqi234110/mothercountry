@@ -28,7 +28,7 @@ public class HelloMotherController {
     @RequestMapping("/hello")
     public Map helloMother(){
         HashMap<Object, Object> map = new HashMap<>();
-        map.put("tip","欢迎来到妈妈邦！");
+        map.put("tip","欢迎来到的来联盟！");
         map.put("message","这里是妈妈们交流的圣地！测试一下");
         map.put("message2","我来啦");
         return map;
