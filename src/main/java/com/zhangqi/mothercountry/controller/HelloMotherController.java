@@ -37,7 +37,7 @@ public class HelloMotherController {
         map.put("message","这里是妈妈们交流的圣地！测试一下");
         map.put("ss","是的撒旦撒旦");
         map.put("token",token);
-  
+        map.put("sdasd","v的覅哦");
         return map;
 
 
