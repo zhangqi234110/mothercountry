@@ -39,13 +39,18 @@ public class HelloMotherController {
         map.put("token",token);
         map.put("sdasd","v的覅哦");
         return map;
+    }
+    @RequestMapping("/ewr")
+    public Map sd(){
 
+        return null;
+    }
 
     }
-    
+
     @RequestMapping("/nihao")
     public String sq(){
-        
+
         return "你好";
     }
     @RequestMapping("/token")
