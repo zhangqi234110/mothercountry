@@ -23,6 +23,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class TicketController {
 
     ReentrantLock lock =new ReentrantLock();
+    ReentrantLock lock2= new ReentrantLock();
 
     @Autowired
     private TicketService ticketService;
