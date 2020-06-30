@@ -38,6 +38,7 @@ public class HelloMotherController {
         map.put("ss","是的撒旦撒旦");
         map.put("token",token);
         map.put("aa","请问九七五九二");
+        map.put("rfr","神圣的 发给 );
         return map;
 
 
