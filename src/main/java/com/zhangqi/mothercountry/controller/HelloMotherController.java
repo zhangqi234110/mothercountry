@@ -37,7 +37,9 @@ public class HelloMotherController {
         map.put("message","这里是妈妈们交流的圣地！测试一下");
         map.put("ss","是的撒旦撒旦");
         map.put("token",token);
+        map.put("aa","请问九七五九二");
         return map;
+
 
     }
     @RequestMapping("/token")
@@ -60,6 +62,7 @@ public class HelloMotherController {
         map.put("totalsize",100);
         responseVo.setData(map);
         return responseVo;
+
 
     }
 
