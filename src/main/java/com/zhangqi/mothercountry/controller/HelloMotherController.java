@@ -31,6 +31,7 @@ public class HelloMotherController {
         map.put("tip","欢迎来到的来联盟！");
         map.put("message","这里是妈妈们交流的圣地！测试一下");
         map.put("ss","是的撒旦撒旦");
+        map.put("aa","请问九七五九二");
         return map;
 
     }
