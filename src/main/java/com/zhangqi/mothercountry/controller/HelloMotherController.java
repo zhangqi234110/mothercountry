@@ -42,6 +42,12 @@ public class HelloMotherController {
 
 
     }
+    
+    @RequestMapping("/nihao")
+    public String sq(){
+        
+        return "你好";
+    }
     @RequestMapping("/token")
     public void ss(HttpServletRequest request){
         String token = request.getParameter("token");
