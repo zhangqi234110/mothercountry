@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Pipeline;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.UUID;
 
@@ -43,7 +44,7 @@ public class UserController {
     * 帐号密码登录
     * */
     @RequestMapping("/login")
-    public ResponseVo login(String name,String password){
+    public ResponseVo login(String name, String password, HttpServletRequest request){
         String encode = PasswordCode.encode(password);
         ResponseVo login = userService.login(name, encode);
         return login;

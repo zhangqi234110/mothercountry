@@ -37,7 +37,7 @@ public class HelloMotherController {
         map.put("message","这里是妈妈们交流的圣地！测试一下");
         map.put("ss","是的撒旦撒旦");
         map.put("token",token);
-        map.put("sdasd","v的覅哦");
+        map.put("阿松大","去恶趣味");
         return map;
     }
     @RequestMapping("/ewr")
@@ -46,7 +46,6 @@ public class HelloMotherController {
         return null;
     }
 
-    }
 
     @RequestMapping("/nihao")
     public String sq(){

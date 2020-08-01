@@ -22,14 +22,14 @@ import java.util.concurrent.locks.ReentrantLock;
 @RequestMapping("/ticket")
 public class TicketController {
 
-    ReentrantLock lock =new ReentrantLock();
-    ReentrantLock lock2= new ReentrantLock();
+    //ReentrantLock lock2= new ReentrantLock();
 
     @Autowired
     private TicketService ticketService;
 
     @RequestMapping("/by")
     public ResponseVo byone(@RequestParam("id") int id){
+
         Jedis jedis = new Jedis("localhost");
         byte[] bytes = jedis.get("ticket".getBytes());
         Ticket deserialize = (Ticket) SerializeUtil.deserialize(bytes);
@@ -50,6 +50,8 @@ public class TicketController {
 
     @RequestMapping("/by2")
     public ResponseVo by2(@RequestParam("id") int id){
+        ReentrantLock lock =new ReentrantLock();
+
         lock.lock();
         ResponseVo byone = ticketService.byone(id);
         lock.unlock();
