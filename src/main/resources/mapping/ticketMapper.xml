@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zhangqi.mothercountry.dao.TicketDao">
+
+    <select id="select" parameterType="int" resultType="com.zhangqi.mothercountry.pojo.Ticket">
+
+        select id,name,count from t_ticket where id=#{id}
+
+    </select>
+
+    <update id="byone" parameterType="int">
+
+        update t_ticket set count=count-1 where id=#{id}
+
+    </update>
+
+
+
+</mapper>

@@ -4,6 +4,7 @@ package com.zhangqi.mothercountry.controller;
 import com.zhangqi.mothercountry.service.LabelService;
 import com.zhangqi.mothercountry.vo.ResponseVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,5 +20,13 @@ public class LabelController {
         ResponseVo responseVo = labelService.showAll();
         return responseVo;
     }
+
+    @DeleteMapping("/deleteone")
+    public ResponseVo delete(int id){
+        ResponseVo delete = labelService.delete(id);
+        return delete;
+
+    }
+
 
 }

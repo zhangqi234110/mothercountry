@@ -5,13 +5,13 @@ public class GuanZhu {
     private String uid;
     private String uid2;
 
-    private  Event event;
+    //private  Event event;
 
-    public GuanZhu(int id, String uid, String uid2, Event event) {
+    public GuanZhu(int id, String uid, String uid2) {
         this.id = id;
         this.uid = uid;
         this.uid2 = uid2;
-        this.event = event;
+       // this.event = event;
     }
 
     public int getId() {
@@ -38,11 +38,5 @@ public class GuanZhu {
         this.uid2 = uid2;
     }
 
-    public Event getEvent() {
-        return event;
-    }
 
-    public void setEvent(Event event) {
-        this.event = event;
-    }
 }

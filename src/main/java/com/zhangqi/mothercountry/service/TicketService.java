@@ -2,9 +2,7 @@ package com.zhangqi.mothercountry.service;
 
 import com.zhangqi.mothercountry.vo.ResponseVo;
 
-public interface LabelService {
+public interface TicketService {
 
-    ResponseVo showAll();
-
-    ResponseVo delete(int id);
+    ResponseVo byone(int id);
 }

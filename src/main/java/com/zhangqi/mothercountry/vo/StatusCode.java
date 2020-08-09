@@ -7,7 +7,8 @@ public enum StatusCode {
     REGISTER_SUCCESS(4,"注册成功！"),
     REGISTER_TIP(5,"未检测到帐号，请前往注册！"),
     MESSAGE_TIP(6,"短信获取成功！"),
-    OPERATION_SUCCESS(7,"操作成功");
+    OPERATION_SUCCESS(7,"操作成功"),
+    BY_SUCCESS(9,"购买成功");
 
     private int code;
     private String message;

@@ -10,4 +10,6 @@ public interface LabelDao {
     * 标签种类
     * */
     List<Label> showAll();
+
+    int delete(int id);
 }

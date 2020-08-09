@@ -1,24 +1,18 @@
 package com.zhangqi.mothercountry.pojo;
 
+import com.zhangqi.mothercountry.utils.SerializeUtil;
+
 import java.io.Serializable;
 
-public class Label implements Serializable {
-
+public class Ticket implements Serializable {
     private int id;
     private String name;
+    private int count;
 
-    private Topic topic;
-
-
-
-
-    public Label() {
-    }
-
-    public Label(int id, String name,Topic topic) {
+    public Ticket(int id, String name, int count) {
         this.id = id;
         this.name = name;
-        this.topic=topic;
+        this.count = count;
     }
 
     public int getId() {
@@ -37,11 +31,11 @@ public class Label implements Serializable {
         this.name = name;
     }
 
-    public Topic getTopic() {
-        return topic;
+    public int getCount() {
+        return count;
     }
 
-    public void setTopic(Topic topic) {
-        this.topic = topic;
+    public void setCount(int count) {
+        this.count = count;
     }
 }

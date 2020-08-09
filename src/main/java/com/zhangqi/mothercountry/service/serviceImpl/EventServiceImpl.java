@@ -7,6 +7,7 @@ import com.zhangqi.mothercountry.vo.ResponseVo;
 import com.zhangqi.mothercountry.vo.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class EventServiceImpl implements EventService {
